@@ -27,10 +27,11 @@ variable "GOOGLE_COMPUTE_NETWORK_NAME" {
 }
 
 # Subnet name of the network
-variable "SUBNET_NAME" {
-  default = "mysubnet"
+variable "GOOGLE_SUBNET_NAME" {
+  default = "mongodbclustersubnet"
   description = "GCP subnet"
 }
+
 
 
 

@@ -23,7 +23,7 @@ resource "google_compute_network" "default" {
 # Create a Google Sub Network
 resource "google_compute_subnetwork" "default" {
   project       = google_compute_network.default.project
-  name          = var.SUBNET_NAME
+  name          = var.GOOGLE_SUBNET_NAME
   ip_cidr_range = "10.0.0.0/16"
   region        = var.GCP_REGION_NAME
   network       = google_compute_network.default.id

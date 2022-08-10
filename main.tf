@@ -32,8 +32,10 @@ resource "google_compute_subnetwork" "default" {
 data "google_compute_subnetwork" "default" {
   subnet_id = google_compute_subnetwork.default.id
   provider_name   = "GCP"
+  name       = google_compute_subnetwork.default.name
 }
 
 data "google_compute_network" "default" {
   network_id      = google_compute_network.default.id
+  name       = google_compute_network.default.name
 }

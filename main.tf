@@ -28,13 +28,3 @@ resource "google_compute_subnetwork" "default" {
   region        = var.GCP_REGION_NAME
   network       = google_compute_network.default.id
 }
-
-data "google_compute_subnetwork" "default" {
-  id = google_compute_subnetwork.default.id
-  name       = google_compute_subnetwork.default.name
-}
-
-data "google_compute_network" "default" {
-  id      = google_compute_network.default.id
-  name       = google_compute_network.default.name
-}
